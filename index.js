@@ -11,7 +11,7 @@ const axios = require('axios');
 const { File } = require('megajs');
 const moment = require('moment-timezone');
 
-const ownerNumber = ['94724534316'];
+const ownerNumber = ['94763711930'];
 
 //------------------ Session ---------------------//
 
@@ -22,7 +22,7 @@ if (!fs.existsSync(__dirname + '/session/creds.json')) {
     filer.download((err, data) => {
         if (err) throw err;
         fs.writeFile(__dirname + '/session/creds.json', data, () => {
-            console.log("✅ QUEEN SADU MD| Session downloaded");
+            console.log("✅ QUEEN SITHU MD| Session downloaded");
         });
     });
 }
@@ -40,7 +40,7 @@ async function connectToWA() {
     const { readEnv } = require('./lib/database');
     const config = await readEnv();
     const prefix = config.PREFIX;
-    console.log("✅ QUEEN SADU MD | Connecting");
+    console.log("✅ QUEEN SITHU MD | Connecting");
 
 //------------------ setting input ---------------------//
    
@@ -93,25 +93,25 @@ async function connectToWA() {
                 connectToWA();
             }
         } else if (connection === 'open') {
-            console.log('✅ QUEEN SADU MD | Installing Commands');
+            console.log('✅ QUEEN SITHU MD | Installing Commands');
             const path = require('path');
             fs.readdirSync("./plugins/").forEach((plugin) => {
                 if (path.extname(plugin).toLowerCase() === ".js") {
                     require("./plugins/" + plugin);
                 }
             });
-            console.log('✅ QUEEN SADU MD | Command installed successfully');
-            console.log('✅ QUEEN SADU MD | Bot connected to WhatsApp');
-            let up = `*𝐐𝐔𝐄𝐄𝐍 𝗦𝗔𝗗𝗨 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐃𝐄 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐁𝐎𝐓 💛*
+            console.log('✅ QUEEN SITHU MD | Command installed successfully');
+            console.log('✅ QUEEN SITHU MD | Bot connected to WhatsApp');
+            let up = `*💚𝐐𝐔𝐄𝐄𝐍 𝐒𝐈𝐓𝐇𝐔 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐃𝐄 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐁𝐎𝐓 💚*
 
 *╭─「 ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴍꜱɢ 」*
-*│OWNER*: 𝐌𝐑 𝐃𝐈𝐍𝐄𝐒𝐇
+*│OWNER*: 𝐌𝐑 𝐓𝐇𝐀𝐑𝐔𝐒𝐇𝐀
 *│NUMBER*: +${ownerNumber}
 *│PREFIX*: ${config.PREFIX}
 *╰───────────◈◈►*
 
 *╭──────────◈◈►*
-*│🎗️ SETTING LIST*
+*│🧣 SETTING LIST*
 *│   ───────*
 *│ 1*   *Work Tipe* : *${work}*
 *│ 2*   *Auto Voice* : *${autoVoice}*
@@ -126,8 +126,8 @@ async function connectToWA() {
 *│ 11*  *Welcome* : *${WELCOME}*
 *╰───────────◈◈►*
 
-> *ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡᴀ ʙᴏᴛ ʙʏ Qᴜᴇᴇɴ sadu ᴍᴅ*
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ᴍʀ ᴅɪɴᴇꜱʜ*`;
+> *ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡᴀ ʙᴏᴛ ʙʏ Qᴜᴇᴇɴ ꜱɪᴛʜᴜ ᴍᴅ*
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ᴍʀ ᴛʜᴀʀᴜꜱʜᴀ*`;
             
             conn.sendMessage(ownerNumber + "@s.whatsapp.net", {
                 image: { url: `https://pomf2.lain.la/f/5wapkl5g.jpg` },
@@ -171,7 +171,7 @@ async function connectToWA() {
 
 if (config.autoBioEnabled === 'true'){
     await
-conn.updateProfileStatus(`QUEEN SADU MD ${moment.tz('Asia/Colombo').format('HH:mm:ss')}`)
+conn.updateProfileStatus(`QUEEN SITHU MD ${moment.tz('Asia/Colombo').format('HH:mm:ss')}`)
 
 }
 
@@ -265,7 +265,7 @@ if (!isReact && senderNumber !== botNumber) {
         if (config.OWNER_REACT === "true") {
             if (senderNumber.includes(ownerNumber)) {
                 if (isReact) return;
-                m.react("💃");
+                m.react("🎅");
             }
         }
         
@@ -277,7 +277,7 @@ const isBanUser = [ ...plynYnna ]
       .map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net")
       .includes(sender)
 
-const isCreator = ["94704227534,94787072548"]
+const isCreator = ["94763711930,94711028213"]
       .map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net")
       .includes(sender)    
         
@@ -381,7 +381,7 @@ if(body === "send" || body === "Send" || body === "Seve" || body === "Ewpm" || b
             video: fs.readFileSync("./" + ext),
             mimetype: "video/mp4",
             fileName: `${m.id}.mp4`,
-            caption: "*ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡᴀ ʙᴏᴛ ʙʏ Qᴜᴇᴇɴ ɴᴇᴛʜᴜ ᴍᴅ*> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ɴᴇᴛʜᴜ ᴍᴀx ʏᴛ*" ,
+            caption: "* ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡᴀ ʙᴏᴛ Qᴜᴇᴇɴ ꜱɪᴛʜᴜ ᴍᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ -ᴛʜᴀʀᴜꜱʜᴀ *" ,
             headerType: 4
         };
         await conn.sendMessage(from, buttonMessage,{
@@ -402,13 +402,13 @@ if(body === "send" || body === "Send" || body === "Seve" || body === "Ewpm" || b
                 try {
                     ppuser = await conn.profilePictureUrl(num, 'image');
                 } catch {
-                    ppuser = 'https://pomf2.lain.la/f/hxp64475.jpg';
+                    ppuser = 'https://files.catbox.moe/p2a044.jpg';
                 }
     
                 if (anu.action == 'add') {
-                    conn.sendMessage(anu.id, { text: `Hi @${num.split("@")[0]}, Welcome to ${metadata.subject}\nFeel Free To Introduce Your Self To The Group\n\n*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ-ᴛᴇᴄʜ*`, contextInfo: { mentionedJid: [num] } });
+                    conn.sendMessage(anu.id, { text: `Hi @${num.split("@")[0]}, Welcome to ${metadata.subject}\nFeel Free To Introduce Your Self To The Group\n\n*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴛʜᴀʀᴜꜱʜᴀ-ᴛᴇᴄʜ*`, contextInfo: { mentionedJid: [num] } });
                 } else if (anu.action == 'remove') {
-                    conn.sendMessage(anu.id, { text: `Goodbye @${num.split("@")[0]}!\nSee You Next Time\n\n*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ-ᴛᴇᴄʜ*`, contextInfo: { mentionedJid: [num] } });
+                    conn.sendMessage(anu.id, { text: `Goodbye @${num.split("@")[0]}!\nSee You Next Time\n\n*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴛʜᴀʀᴜꜱʜᴀ-ᴛᴇᴄʜ*`, contextInfo: { mentionedJid: [num] } });
                 }
             }
         });
