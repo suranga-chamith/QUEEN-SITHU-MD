@@ -126,7 +126,7 @@ async (conn, mek, m, { from, isGroup, groupMetadata, groupAdmins, isBotAdmins, r
 //==============================opentime========================
 cmd({
     pattern: "opentime",
-    react: "🔖",
+    react: "🧨",
     desc: "To open group to a time",
     category: "group",
     use: '.opentime',
@@ -164,7 +164,7 @@ l(e)
 //===================================closetime==============================
 cmd({
     pattern: "closetime",
-    react: "🔖",
+    react: "🧨",
     desc: "To close group to a time",
     category: "group",
     use: '.closstime',
@@ -202,7 +202,7 @@ l(e)
 //================================tagall================================
 cmd({
     pattern: "tagall",
-    react: "🔖",
+    react: "🧨",
     desc: "To tag all Participants",
     category: "group",
     use: '.hidetag <hi>',
@@ -264,7 +264,7 @@ async (conn, mek, m, { from, isGroup, groupMetadata, groupAdmins, reply }) => {
 //=====================mute=================================
 cmd({
     pattern: "mute",
-    react: "🔖",
+    react: "🧨",
     desc: "Close a group (only admins can send messages).",
     category: "group",
     use: '.mute',
@@ -291,7 +291,7 @@ async (conn, mek, m, { from, isGroup, isBotAdmins, isAdmins, reply }) => {
 //========================================unmute====================================
 cmd({
     pattern: "unmute",
-    react: "🔖",
+    react: "🧨",
     desc: "Open a group (everyone can send messages).",
     category: "group",
     use: '.unmute',
